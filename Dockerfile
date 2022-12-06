@@ -18,6 +18,11 @@ RUN apt install python3 python3-dev build-essential -y
 RUN wget -O hyper_3.2.3_amd64.deb https://releases.hyper.is/download/deb
 RUN apt install ./hyper_3.2.3_amd64.deb -y
 
+RUN apt-get update \
+    && apt-get install -y sudo \
+    && echo 'kasm-user ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
+    && rm -rf /var/lib/apt/list/*
+
 RUN  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add - \
     && apt-get update \
     && apt-get install -y apt-transport-https \
