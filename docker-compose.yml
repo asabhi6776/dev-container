@@ -1,7 +1,6 @@
 version: '3'
 services:
     dev_container:
-        platform: amd64
         container_name: dev_container
         image: asabhi6776/dev_container:latest
         restart: always
@@ -10,4 +9,3 @@ services:
             VNC_PW: Singh
         ports:
             - "6901:6901"
-         

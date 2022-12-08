@@ -1,4 +1,4 @@
-FROM kasmweb/core-ubuntu-focal:1.12.0
+FROM kasmweb/core-ubuntu-focal:1.12.0-rolling
 LABEL maintainer="https://github.com/asabhi6776"
 USER root
 
