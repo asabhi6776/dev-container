@@ -2,10 +2,13 @@ version: '3'
 services:
     dev_container:
         container_name: dev_container
+        # you can find other tags in docker hub
         image: asabhi6776/dev_container:latest
         restart: always
         command: "--shm-size=512m"
         environment:
-            VNC_PW: Singh
+        #username will be kasm_user
+            VNC_PW: password
+        # change port as per your need
         ports:
             - "6901:6901"
