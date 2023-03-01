@@ -37,7 +37,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/list/*
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    sudo apt install ./google-chrome-stable_current_amd64.deb
+    sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 RUN  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add - \
     && apt-get update \
